@@ -7,7 +7,7 @@ public interface TempPolicyStatusDAO {
 	
 	public void saveOrUpdate(TempPolicyStatus tempPolicyStatus);
 	
-	public void delet(int StatusCode);
+	public void delet(int statusCode);
 	
 	public TempPolicyStatus get(int statusCode);
 

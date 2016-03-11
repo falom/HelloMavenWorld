@@ -30,10 +30,10 @@ public class TempPolicyStatusDAOImpl implements TempPolicyStatusDAO {
 		}
 	}
 
-	public void delet(int StatusCode) {
+	public void delet(int statusCode) {
 		// TODO Auto-generated method stub
 		String sql = "DELETE FROM TempPolicyStatus WHERE StatusCode=?";
-		jdbcTemplate.update(sql, StatusCode);
+		jdbcTemplate.update(sql, statusCode);
 	}
 
 	public TempPolicyStatus get(int statusCode) {

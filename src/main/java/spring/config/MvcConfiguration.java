@@ -12,6 +12,7 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import spring.dao.PolicyDAOImpl;
 import spring.dao.TempPolicyStatusDAOImpl;
 
 @Configuration
@@ -45,5 +46,10 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter{
 	@Bean
 	public TempPolicyStatusDAOImpl getTempPolicyStatus(){
 		return new TempPolicyStatusDAOImpl(getDataSource());
+	}
+	
+	@Bean
+	public PolicyDAOImpl getPolicyId(){
+		return new PolicyDAOImpl(getDataSource());
 	}
 }
